@@ -2,12 +2,39 @@
 <html>
 <head>
 
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <script type="text/javascript" src="js/scripts.js"></script>
-  <title>Hello Friend</title>
+  <title>Bank Account</title>
 </head>
 <body>
+    <div class="container">
+        <h2>Bank Account</h2>
 
+        <form id="new-bankaccount">
+            <div class="form-group">
+                <label type="text" for="name">Your Name</label>
+                <input type="text" id="new-name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label type="text" for="name">Initial Deposit</label>
+                <input type="number" id="new-deposit" class="form-control" placeholder="00.00">
+            </div>
+            <button name="submit" class="btn btn-primary">Create Bank Account</button>
+        </form>
+
+        <form id="withdrawlDeposit">
+            <div class="form-group">
+                <label type="text" for="name">Withdrawl Ammount</label>
+                <input type="number" id="withdrawl" class="form-control">
+            </div>
+            <div class="form-group">
+                <label type="text" for="name">Deposit Ammount</label>
+                <input type="number" id="deposit" class="form-control">
+            </div>
+            <button name="submit" class="btn btn-primary">Create Bank Account</button>
+        </form>
+
+    </div>
 </body>
 </html>
