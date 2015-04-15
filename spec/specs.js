@@ -1,18 +1,26 @@
 describe("BankAccount", function() {
 
+    describe("balance value", function() {
+        it("displays the value of balance", function() {
+            var testBalance = Object.create(BankAccount);
+            var balance = testBalance.balance;
+            expect(balance).to.equal(0);
+        });
+    });
+
     describe("deposit", function() {
-        it("adds the amount to the balance", function() {
-            var testBankAccount = Object.create(BankAccount);
-            testBankAccount.deposit(1000);
-            expect(testBankAccount.balance).to.equal(1000);
+        it("adds money to balance", function() {
+            var testDeposit = Object.create(BankAccount);
+            testDeposit.deposit(10000);
+            expect(testDeposit.balance).to.equal(10000);
         });
     });
 
     describe("withdraw", function() {
-        it("subtracts the amount from the balance", function() {
-            var testBankAccount = Object.create(BankAccount);
-            testBankAccount.withdraw(10);
-            expect(testBankAccount.balance).to.equal(-10);
+        it("subtracts money from balance", function() {
+            var testWithdrawl = Object.create(BankAccount);
+            testWithdrawl.withdraw(5000);
+            expect(textWithdrawl.balance).to.equal(-5000);
         });
     });
 

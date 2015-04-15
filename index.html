@@ -27,13 +27,13 @@
         <form id="withdrawlDeposit">
             <div class="form-group">
                 <label type="text" for="name">Withdrawl Amount</label>
-                <input type="number" id="withdrawl" class="form-control">
+                <input type="number" id="withdrawl" class="form-control" min=0>
             </div>
-            <!-- <div class="form-group">
+            <div class="form-group">
                 <label type="text" for="name">Deposit Amount</label>
-                <input type="number" id="deposit" class="form-control">
-            </div> -->
-            <button name="submit" class="btn btn-primary">withdrawl</button>
+                <input type="number" id="deposit" class="form-control" min =0>
+            </div>
+            <button name="submit" class="btn btn-primary">NEW BALANCE~!</button>
         </form>
 
         <h2>Your balance is:</h2>
@@ -42,3 +42,19 @@
     </div>
 </body>
 </html>
+
+<!-- describe("deposit", function() {
+    it("adds the amount to the balance", function() {
+        var testBankAccount = Object.create(BankAccount);
+        testBankAccount.deposit(1000);
+        expect(testBankAccount.balance).to.equal(1000);
+    });
+});
+
+describe("withdraw", function() {
+    it("subtracts the amount from the balance", function() {
+        var testBankAccount = Object.create(BankAccount);
+        testBankAccount.withdraw(10);
+        expect(testBankAccount.balance).to.equal(-10);
+    });
+}); -->

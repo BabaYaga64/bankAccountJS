@@ -3,19 +3,20 @@ var BankAccount = {
     balance: 0,
 
     deposit: function(amount) {
+        if (isNaN(amount)) {
+            amount = 0;
+        }
         this.balance = this.balance + amount;
+
     },
 
     withdraw:function(amount) {
+        if (isNaN(amount)) {
+            amount = 0;
+        }
         this.balance = this.balance - amount;
     }
 };
-
-// var newAccount = Object.create(BankAccount);
-//     newAccount.balance;
-//     newAccount.deposit(2500);
-//     newAccount.balance;
-
 
 
 $(document).ready(function() {
@@ -35,23 +36,34 @@ $(document).ready(function() {
         var result = createAccount.balance;
         $("span.balance").text(result);
 
+
+
         $("form#withdrawlDeposit").submit(function(event) {
+
             //includes an event.preventDefault after EVERY submit event
             event.preventDefault();
 
             var withdrawlMoney = parseInt($("input#withdrawl").val());
-            var newBalance = createAccount.withdraw(withdrawlMoney);
+            createAccount.withdraw(withdrawlMoney);
+            debugger;
+
+            var depositMoney = parseInt($("input#deposit").val());
+            createAccount.deposit(depositMoney);
+
 
 
             //display monies
             //var result = createAccount.balance;
             $("span.balance").text(createAccount.balance);
 
-
             //var depositMoney = parseInt($("input#deposit").val());
 
         });//Ends form#withdrawlDeposit
 
+
+
     });//Ends form#new-bankaccount
+
+
 
 });//Ends document.ready
